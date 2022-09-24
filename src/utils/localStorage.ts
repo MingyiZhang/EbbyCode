@@ -25,16 +25,11 @@ export const saveState = (state: ProblemDisplay[]) => {
 export const downloadToJson = (state: ProblemDisplay[]) => {
   const filename = "state.json";
   const contentType = "application/json;charset=utf-8;";
-  if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-    const blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(state)))], {type: contentType});
-    navigator.msSaveOrOpenBlob(blob, filename);
-  } else {
-    const a = document.createElement('a');
-    a.download = filename;
-    a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(state));
-    a.target = '_blank';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  const a = document.createElement('a');
+  a.download = filename;
+  a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(state));
+  a.target = '_blank';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };

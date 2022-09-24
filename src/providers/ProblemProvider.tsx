@@ -2,11 +2,6 @@ import React, {createContext, Dispatch, ReactElement, ReactNode, useReducer} fro
 import {loadState} from "../utils/localStorage";
 import {selectProblems, updateWeightsNormCumulated} from "../utils/ebbinghaus";
 
-type Platform = 'leetcode' | 'codility';
-type DifficultyLeetCode = 'easy' | 'medium' | 'hard';
-type DifficultyCodility = 'painless' | 'respectable'
-type Difficulty = DifficultyLeetCode | DifficultyCodility;
-
 export interface ProblemDisplay {
   platform: number;
   serial: string;
