@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EbbyCode/static/css/main.ce22e544.chunk.css",
-    "main.js": "/EbbyCode/static/js/main.187187a8.chunk.js",
-    "main.js.map": "/EbbyCode/static/js/main.187187a8.chunk.js.map",
+    "main.js": "/EbbyCode/static/js/main.f02a7f50.chunk.js",
+    "main.js.map": "/EbbyCode/static/js/main.f02a7f50.chunk.js.map",
     "runtime-main.js": "/EbbyCode/static/js/runtime-main.837c2f88.js",
     "runtime-main.js.map": "/EbbyCode/static/js/runtime-main.837c2f88.js.map",
     "static/js/2.a00b87c0.chunk.js": "/EbbyCode/static/js/2.a00b87c0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.837c2f88.js",
     "static/js/2.a00b87c0.chunk.js",
     "static/css/main.ce22e544.chunk.css",
-    "static/js/main.187187a8.chunk.js"
+    "static/js/main.f02a7f50.chunk.js"
   ]
 }
