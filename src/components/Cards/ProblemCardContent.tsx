@@ -1,33 +1,35 @@
 import React from 'react';
-import {CardContent, createStyles, Grid, LinearProgress, Typography} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
+import {CardContent, Grid, LinearProgress, Typography} from "@mui/material";
+import { makeStyles } from 'tss-react/mui';
 import {difficulty, platform, ProblemDisplay} from "../../providers/ProblemProvider";
 
-const useStyles = makeStyles(() =>
-  createStyles({
+const useStyles = makeStyles()(() =>
+  ({
     bullet: {
       display: 'inline-block',
       margin: '0 2px',
       transform: 'scale(0.8)',
     },
+
     title: {
       fontSize: 14,
     },
+
     pos: {
       marginBottom: 12,
     },
+
     content: {
       textAlign: "left",
     }
-  })
-);
+  }));
 
 export interface ProblemCardProps {
   problem: ProblemDisplay;
 }
 
 const ProblemCardContent = (props: ProblemCardProps) => {
-  const classes = useStyles();
+  const { classes } = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   const problem = props.problem;
 

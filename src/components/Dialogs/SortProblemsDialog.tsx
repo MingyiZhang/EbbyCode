@@ -9,7 +9,7 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup, Switch
-} from "@material-ui/core";
+} from "@mui/material";
 import {DialogStateContext} from "../../providers/DialogStateProvider";
 import {ProblemsContext, sortEntries, sortEntryLabels, sortEntry} from "../../providers/ProblemProvider";
 

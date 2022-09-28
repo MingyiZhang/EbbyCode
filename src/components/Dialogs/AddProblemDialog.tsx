@@ -7,27 +7,25 @@ import {
   DialogContent,
   DialogTitle,
   Grid,
-  IconButton,
-  InputAdornment,
   MenuItem,
   TextField,
   useMediaQuery,
   useTheme
-} from "@material-ui/core";
-import DateFnsUtils from "@date-io/date-fns";
-import {DateTimePicker, MuiPickersUtilsProvider} from "@material-ui/pickers";
-import {InsertInvitation} from "@material-ui/icons";
+} from "@mui/material";
+import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
+import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
+import {DateTimePicker} from "@mui/x-date-pickers/DateTimePicker"
 import {ProblemDisplay, ProblemsContext} from "../../providers/ProblemProvider";
 import {getWeight} from "../../utils/ebbinghaus";
 import {ChoicesContext, LeetCodeChoice} from "../../providers/ChoiceProvider";
-import {Autocomplete} from "@material-ui/lab";
+import {Autocomplete} from '@mui/material';
 
 const AddProblemDialog = () => {
   const {addProblemDialogOpen, dispatch} = useContext(DialogStateContext);
   const {dispatch: problemDispatch} = useContext(ProblemsContext);
   const {leetCodeChoices} = useContext(ChoicesContext);
   const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const [platform, setPlatform] = useState<number>(0);
   const [serial, setSerial] = useState<string>("");
@@ -87,9 +85,7 @@ const AddProblemDialog = () => {
   };
 
   return (
-
     <Dialog
-      // fullWidth
       fullScreen={fullScreen}
       open={addProblemDialogOpen}
       onClose={handleClose}
@@ -97,7 +93,7 @@ const AddProblemDialog = () => {
     >
       <DialogTitle id="add-problem-dialog-title">{"Add New Problem"}</DialogTitle>
       <DialogContent>
-        <Grid container spacing={2} justify={"center"} alignItems={"center"}>
+        <Grid container spacing={2} justifyContent={"center"} alignItems={"center"} sx={{pt: 2}}>
           <Grid item xs={12} sm={6}>
             <TextField
               id={"platform"}
@@ -124,9 +120,6 @@ const AddProblemDialog = () => {
                 }
               }}
               inputValue={serial}
-              onInputChange={(event, newInputValue) => {
-                setSerial(newInputValue);
-              }}
               fullWidth
               renderInput={params =>
                 <TextField
@@ -148,9 +141,6 @@ const AddProblemDialog = () => {
                 }
               }}
               inputValue={title}
-              onInputChange={(event, newInputValue) => {
-                setTitle(newInputValue);
-              }}
               fullWidth
               renderInput={params =>
                 <TextField
@@ -198,34 +188,16 @@ const AddProblemDialog = () => {
             }
           </Grid>
           <Grid item xs={12} sm={6}>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DateTimePicker
-                autoOk
-                clearable
-                fullWidth
-                inputVariant="outlined"
-                color="secondary"
+                renderInput={(props) => <TextField {...props} fullWidth color="secondary"/>}
                 ampm={false}
-                allowKeyboardControl={false}
-                margin="normal"
-                id="create time"
-                label="Create Time"
                 value={time}
-                strictCompareDates={true}
+                label="Create Time"
                 onChange={(date) => setTime(date)}
                 onError={console.log}
-                format="dd.MMM.yyyy HH:mm"
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton>
-                        <InsertInvitation/>
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
               />
-            </MuiPickersUtilsProvider>
+            </LocalizationProvider>
           </Grid>
         </Grid>
       </DialogContent>
@@ -247,7 +219,6 @@ const AddProblemDialog = () => {
         </Button>
       </DialogActions>
     </Dialog>
-
   );
 };
 
