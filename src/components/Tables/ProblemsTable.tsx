@@ -10,11 +10,11 @@ import {
   TableContainer,
   TableRow,
   Tooltip
-} from "@material-ui/core";
-import CloseIcon from '@material-ui/icons/Close';
-import CheckIcon from '@material-ui/icons/Check';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
-import RotateLeftIcon from '@material-ui/icons/RotateLeft';
+} from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 
 interface ProblemsTableProps {
   problems: ProblemDisplay[];
@@ -77,10 +77,7 @@ const ProblemsTable = (props: ProblemsTableProps): ReactElement => {
               <TableCell>{p.remember}</TableCell>
               <TableCell>
                 <ButtonGroup>
-                  <IconButton
-                    aria-label={"delete"}
-                    onClick={() => handleDelete(p.index)}
-                  >
+                  <IconButton aria-label={"delete"} onClick={() => handleDelete(p.index)} size="large">
                     <Tooltip title={"delete"}>
                       <CloseIcon color={"secondary"}/>
                     </Tooltip>
@@ -88,7 +85,7 @@ const ProblemsTable = (props: ProblemsTableProps): ReactElement => {
                   <IconButton
                     aria-label={"remembered"}
                     onClick={() => handleUpdate(p, "remembered")}
-                  >
+                    size="large">
                     <Tooltip title={"remembered"}>
                       <CheckIcon style={{color: "green"}}/>
                     </Tooltip>
@@ -96,7 +93,7 @@ const ProblemsTable = (props: ProblemsTableProps): ReactElement => {
                   <IconButton
                     aria-label={"fail-to-remember"}
                     onClick={() => handleUpdate(p, "fail-to-remember")}
-                  >
+                    size="large">
                     <Tooltip title={"forget"}>
                       <RadioButtonUncheckedIcon style={{color: "orange"}}/>
                     </Tooltip>
@@ -104,7 +101,7 @@ const ProblemsTable = (props: ProblemsTableProps): ReactElement => {
                   <IconButton
                     aria-label={"reset"}
                     onClick={() => handleUpdate(p, "reset")}
-                  >
+                    size="large">
                     <Tooltip title={"reset"}>
                       <RotateLeftIcon style={{color: "blue"}}/>
                     </Tooltip>
@@ -116,7 +113,7 @@ const ProblemsTable = (props: ProblemsTableProps): ReactElement => {
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
 export default ProblemsTable;

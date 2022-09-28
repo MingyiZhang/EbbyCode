@@ -1,25 +1,24 @@
 import React, {useContext} from 'react';
-import {createStyles, makeStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
+import { makeStyles } from 'tss-react/mui';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
 import {ProblemDisplay, ProblemsContext} from "../../providers/ProblemProvider";
-import {ButtonGroup, IconButton} from "@material-ui/core";
-import CheckIcon from '@material-ui/icons/Check';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import {ButtonGroup, IconButton} from "@mui/material";
+import CheckIcon from '@mui/icons-material/Check';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import ProblemCardContent, {ProblemCardProps} from "./ProblemCardContent";
 
-const useStyles = makeStyles(() =>
-  createStyles({
+const useStyles = makeStyles()(() =>
+  ({
     card: {
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
-    },
-  })
-);
+    }
+  }));
 
 const SelectedProblemCard = (props: ProblemCardProps) => {
-  const classes = useStyles();
+  const { classes } = useStyles();
   const problem = props.problem;
 
   const {dispatch} = useContext(ProblemsContext);
@@ -56,13 +55,13 @@ const SelectedProblemCard = (props: ProblemCardProps) => {
           <IconButton
             aria-label={"remembered"}
             onClick={() => handleUpdate(problem, "remembered")}
-          >
+            size="large">
             <CheckIcon style={{color: "green"}}/>
           </IconButton>
           <IconButton
             aria-label={"fail-to-remember"}
             onClick={() => handleUpdate(problem, "fail-to-remember")}
-          >
+            size="large">
             <RadioButtonUncheckedIcon style={{color: "orange"}}/>
           </IconButton>
         </ButtonGroup>

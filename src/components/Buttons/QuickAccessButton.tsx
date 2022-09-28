@@ -1,21 +1,21 @@
 import React, {ChangeEvent, useContext, useState} from "react";
-import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import NoteAddIcon from '@material-ui/icons/NoteAdd';
-import AutorenewIcon from '@material-ui/icons/Autorenew';
-import SpeedDial from "@material-ui/lab/SpeedDial";
-import SpeedDialIcon from "@material-ui/lab/SpeedDialIcon";
-import SpeedDialAction from "@material-ui/lab/SpeedDialAction";
+import { makeStyles } from 'tss-react/mui';
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
 import {DialogStateContext} from "../../providers/DialogStateProvider";
 import {ProblemDisplay, ProblemsContext} from "../../providers/ProblemProvider";
 import {selectProblems} from "../../utils/ebbinghaus";
 
-import GetAppIcon from '@material-ui/icons/GetApp';
-import PublishIcon from '@material-ui/icons/Publish';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import PublishIcon from '@mui/icons-material/Publish';
 import {downloadToJson} from "../../utils/localStorage";
-import SortByAlphaIcon from '@material-ui/icons/SortByAlpha';
+import SortByAlphaIcon from '@mui/icons-material/SortByAlpha';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
+const useStyles = makeStyles()((theme) =>
+  ({
     speedDial: {
       position: 'fixed',
       '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
@@ -27,11 +27,10 @@ const useStyles = makeStyles((theme: Theme) =>
         left: theme.spacing(5),
       },
     }
-  })
-);
+  }));
 
 const QuickAccessButton = () => {
-  const classes = useStyles();
+  const { classes } = useStyles();
   const [open, setOpen] = useState<boolean>(false);
   const {dispatch} = useContext(DialogStateContext);
   const {problems, dispatch: dispatchProblem} = useContext(ProblemsContext);

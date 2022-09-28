@@ -1,8 +1,8 @@
 import React, {ReactElement, useContext} from 'react';
 import {difficulty, platform, ProblemDisplay, ProblemsContext} from "../../providers/ProblemProvider";
-import {ButtonGroup, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableRow} from "@material-ui/core";
-import CheckIcon from '@material-ui/icons/Check';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import {ButtonGroup, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableRow} from "@mui/material";
+import CheckIcon from '@mui/icons-material/Check';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 interface ProblemsTableProps {
   problems: ProblemDisplay[];
@@ -53,13 +53,13 @@ const SelectedProblemsTable = (props: ProblemsTableProps): ReactElement => {
                   <IconButton
                     aria-label={"remembered"}
                     onClick={() => handleUpdate(p, "remembered")}
-                  >
+                    size="large">
                     <CheckIcon style={{ color: "green"}}/>
                   </IconButton>
                   <IconButton
                     aria-label={"fail-to-remember"}
                     onClick={() => handleUpdate(p, "fail-to-remember")}
-                  >
+                    size="large">
                     <RadioButtonUncheckedIcon style={{ color: "orange"}}/>
                   </IconButton>
                 </ButtonGroup>
@@ -69,7 +69,7 @@ const SelectedProblemsTable = (props: ProblemsTableProps): ReactElement => {
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
 export default SelectedProblemsTable;
