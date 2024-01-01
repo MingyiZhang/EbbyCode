@@ -6,20 +6,26 @@ import * as serviceWorker from './serviceWorker';
 import {ProblemsProvider} from "./providers/ProblemProvider";
 import {DialogStateProvider} from "./providers/DialogStateProvider";
 import {ChoicesProvider} from "./providers/ChoiceProvider";
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
 root.render(
-  <React.StrictMode>
-    <ChoicesProvider>
-      <ProblemsProvider>
-        <DialogStateProvider>
-          <App/>
-        </DialogStateProvider>
-      </ProblemsProvider>
-    </ChoicesProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+      <ChoicesProvider>
+        <ProblemsProvider>
+          <DialogStateProvider>
+            <DevSupport ComponentPreviews={ComponentPreviews}
+                        useInitialHook={useInitial}
+            >
+              <App/>
+            </DevSupport>
+          </DialogStateProvider>
+        </ProblemsProvider>
+      </ChoicesProvider>
+    </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change
