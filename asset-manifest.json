@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/EbbyCode/static/css/main.e0515df6.css",
-    "main.js": "/EbbyCode/static/js/main.fb267723.js",
-    "static/js/238.0bcf873f.chunk.js": "/EbbyCode/static/js/238.0bcf873f.chunk.js",
-    "static/js/811.89776e79.chunk.js": "/EbbyCode/static/js/811.89776e79.chunk.js",
+    "main.js": "/EbbyCode/static/js/main.1890fcfc.js",
+    "static/js/238.17e04669.chunk.js": "/EbbyCode/static/js/238.17e04669.chunk.js",
+    "static/js/67.6cbf4380.chunk.js": "/EbbyCode/static/js/67.6cbf4380.chunk.js",
     "index.html": "/EbbyCode/index.html",
     "main.e0515df6.css.map": "/EbbyCode/static/css/main.e0515df6.css.map",
-    "main.fb267723.js.map": "/EbbyCode/static/js/main.fb267723.js.map",
-    "238.0bcf873f.chunk.js.map": "/EbbyCode/static/js/238.0bcf873f.chunk.js.map",
-    "811.89776e79.chunk.js.map": "/EbbyCode/static/js/811.89776e79.chunk.js.map"
+    "main.1890fcfc.js.map": "/EbbyCode/static/js/main.1890fcfc.js.map",
+    "238.17e04669.chunk.js.map": "/EbbyCode/static/js/238.17e04669.chunk.js.map",
+    "67.6cbf4380.chunk.js.map": "/EbbyCode/static/js/67.6cbf4380.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0515df6.css",
-    "static/js/main.fb267723.js"
+    "static/js/main.1890fcfc.js"
   ]
 }
