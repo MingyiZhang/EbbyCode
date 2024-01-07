@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "/EbbyCode/static/css/main.ce22e544.chunk.css",
-    "main.js": "/EbbyCode/static/js/main.7a81918e.chunk.js",
-    "main.js.map": "/EbbyCode/static/js/main.7a81918e.chunk.js.map",
-    "runtime-main.js": "/EbbyCode/static/js/runtime-main.837c2f88.js",
-    "runtime-main.js.map": "/EbbyCode/static/js/runtime-main.837c2f88.js.map",
-    "static/js/2.6f7029ca.chunk.js": "/EbbyCode/static/js/2.6f7029ca.chunk.js",
-    "static/js/2.6f7029ca.chunk.js.map": "/EbbyCode/static/js/2.6f7029ca.chunk.js.map",
+    "main.css": "/EbbyCode/static/css/main.e0515df6.css",
+    "main.js": "/EbbyCode/static/js/main.540a337c.js",
+    "static/js/238.0bcf873f.chunk.js": "/EbbyCode/static/js/238.0bcf873f.chunk.js",
+    "static/js/811.6b6484e3.chunk.js": "/EbbyCode/static/js/811.6b6484e3.chunk.js",
     "index.html": "/EbbyCode/index.html",
-    "static/css/main.ce22e544.chunk.css.map": "/EbbyCode/static/css/main.ce22e544.chunk.css.map",
-    "static/js/2.6f7029ca.chunk.js.LICENSE.txt": "/EbbyCode/static/js/2.6f7029ca.chunk.js.LICENSE.txt"
+    "main.e0515df6.css.map": "/EbbyCode/static/css/main.e0515df6.css.map",
+    "main.540a337c.js.map": "/EbbyCode/static/js/main.540a337c.js.map",
+    "238.0bcf873f.chunk.js.map": "/EbbyCode/static/js/238.0bcf873f.chunk.js.map",
+    "811.6b6484e3.chunk.js.map": "/EbbyCode/static/js/811.6b6484e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.837c2f88.js",
-    "static/js/2.6f7029ca.chunk.js",
-    "static/css/main.ce22e544.chunk.css",
-    "static/js/main.7a81918e.chunk.js"
+    "static/css/main.e0515df6.css",
+    "static/js/main.540a337c.js"
   ]
 }
