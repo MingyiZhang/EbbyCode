@@ -8,6 +8,28 @@
   "stat_status_pairs": [
     {
       "stat": {
+        "question_id": 1912,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Merge String Alternately",
+        "question__title_slug": "merge-string-alternately",
+        "question__hide": false,
+        "total_acs": 0,
+        "total_submitted": 0,
+        "frontend_question_id": 1768,
+        "is_new_question": true
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": true,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
         "question_id": 1618,
         "question__article__live": null,
         "question__article__slug": null,
