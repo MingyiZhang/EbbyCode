@@ -112,7 +112,7 @@ const AddProblemDialog = () => {
             <Grid item xs={12} sm={6}>
               <Autocomplete
                   id="serial"
-                  options={leetCodeChoices.sort((a, b) => a.id - b.id)}
+                  options={[...leetCodeChoices].sort((a, b) => a.id - b.id)}
                   getOptionLabel={option => option.id.toString()}
                   onChange={(event, newValue) => {
                     if (newValue !== null) {
@@ -133,7 +133,7 @@ const AddProblemDialog = () => {
             <Grid item xs={12}>
               <Autocomplete
                   id="title"
-                  options={leetCodeChoices.sort((a, b) => a.title.localeCompare(b.title))}
+                  options={[...leetCodeChoices].sort((a, b) => a.title.localeCompare(b.title))}
                   getOptionLabel={option => option.title}
                   onChange={(event, newValue) => {
                     if (newValue !== null) {
